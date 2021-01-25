@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 import random
-import os
  
 app = commands.Bot(command_prefix='/')
 
@@ -140,4 +139,4 @@ async def ranbox_gondu(ctx):
     else:
         await ctx.send(random.choice(list_gondu) + '\n※ ' + '<@{}>'.format(ctx.message.author.id) + ', ' + item + ' 구매 완료.')
      
-app.run(os.environ['token'])
+app.run('token')
